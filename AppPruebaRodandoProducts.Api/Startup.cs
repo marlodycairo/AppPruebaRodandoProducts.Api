@@ -1,5 +1,7 @@
 using AppPruebaRodandoProducts.Api.Application;
 using AppPruebaRodandoProducts.Api.ApplicationService;
+using AppPruebaRodandoProducts.Api.Domain;
+using AppPruebaRodandoProducts.Api.DomainService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -19,6 +21,7 @@ namespace AppPruebaRodandoProducts.Api
     public class Startup
     {
         public Startup(IConfiguration configuration)
+        
         {
             Configuration = configuration;
         }
@@ -36,6 +39,7 @@ namespace AppPruebaRodandoProducts.Api
             });
 
             services.AddSingleton<IClienteApplication, ClienteApplication>();
+            services.AddSingleton<IClienteDomain, ClienteDomain>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AppPruebaRodandoProducts.Api.Domain\AppPruebaRodandoProducts.Api.Domain.csproj" />
+    <ProjectReference Include="..\AppPruebaRodandoProducts.Api.Infrastructure\AppPruebaRodandoProducts.Api.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

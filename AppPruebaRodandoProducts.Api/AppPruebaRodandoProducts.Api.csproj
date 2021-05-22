@@ -13,6 +13,8 @@
   <ItemGroup>
     <ProjectReference Include="..\AppPruebaRodandoProducts.Api.ApplicationService\AppPruebaRodandoProducts.Api.ApplicationService.csproj" />
     <ProjectReference Include="..\AppPruebaRodandoProducts.Api.Application\AppPruebaRodandoProducts.Api.Application.csproj" />
+    <ProjectReference Include="..\AppPruebaRodandoProducts.Api.DomainService\AppPruebaRodandoProducts.Api.DomainService.csproj" />
+    <ProjectReference Include="..\AppPruebaRodandoProducts.Api.Domain\AppPruebaRodandoProducts.Api.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -15,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPruebaRodandoProducts.Ap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPruebaRodandoProducts.Api.Infrastructure", "AppPruebaRodandoProducts.Api.Infrastructure\AppPruebaRodandoProducts.Api.Infrastructure.csproj", "{50A7EB04-D95F-402F-B8C9-121C3F74C1ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppPruebaRodandoProducts.Api.InfrastructureService", "AppPruebaRodandoProducts.Api.InfrastructureService\AppPruebaRodandoProducts.Api.InfrastructureService.csproj", "{90FE60DD-1BA2-468C-898D-C269AD479592}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,10 +45,6 @@ Global
 		{50A7EB04-D95F-402F-B8C9-121C3F74C1ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50A7EB04-D95F-402F-B8C9-121C3F74C1ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50A7EB04-D95F-402F-B8C9-121C3F74C1ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{90FE60DD-1BA2-468C-898D-C269AD479592}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90FE60DD-1BA2-468C-898D-C269AD479592}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90FE60DD-1BA2-468C-898D-C269AD479592}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90FE60DD-1BA2-468C-898D-C269AD479592}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

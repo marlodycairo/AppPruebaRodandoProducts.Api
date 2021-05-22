@@ -40,10 +40,11 @@ namespace AppPruebaRodandoProducts.Api
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AppPruebaRodandoProducts.Api", Version = "v1" });
             });
-
-            services.AddSingleton<IClienteRepository, ClienteRepository>();
-            //services.AddSingleton<IClienteApplication, ClienteApplication>();
+            
+            services.AddSingleton<IClienteApplication, ClienteApplication>();
             services.AddSingleton<IClienteDomain, ClienteDomain>();
+            services.AddSingleton<IClienteRepository, ClienteRepository>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace AppPruebaRodandoProducts.Api.Application
+namespace AppPruebaRodandoProducts.Api.Infrastructure.Repositories.RepositoriesGeneric
 {
-    public interface IClienteApplication<TEntity> where TEntity : class
+    public interface IGenericRepository<TEntity> where TEntity : class
     {
         IEnumerable<TEntity> GetAll();
         TEntity GetById(int id);

@@ -2,6 +2,9 @@ using AppPruebaRodandoProducts.Api.Application;
 using AppPruebaRodandoProducts.Api.ApplicationService;
 using AppPruebaRodandoProducts.Api.Domain;
 using AppPruebaRodandoProducts.Api.DomainService;
+using AppPruebaRodandoProducts.Api.Infrastructure.Entities;
+using AppPruebaRodandoProducts.Api.Infrastructure.Repositories.IRepositoriesGeneric;
+using AppPruebaRodandoProducts.Api.Infrastructure.Repositories.RepositoriesGeneric;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -38,7 +41,8 @@ namespace AppPruebaRodandoProducts.Api
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "AppPruebaRodandoProducts.Api", Version = "v1" });
             });
 
-            services.AddSingleton<IClienteApplication, ClienteApplication>();
+            services.AddSingleton<IClienteRepository, ClienteRepository>();
+            //services.AddSingleton<IClienteApplication, ClienteApplication>();
             services.AddSingleton<IClienteDomain, ClienteDomain>();
         }
 

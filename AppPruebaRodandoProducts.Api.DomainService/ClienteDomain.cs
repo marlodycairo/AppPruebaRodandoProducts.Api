@@ -1,6 +1,6 @@
-﻿using AppPruebaRodandoProducts.Api.Domain;
+﻿using AppPruebaRodandoProducts.Api.Application;
+using AppPruebaRodandoProducts.Api.Domain;
 using AppPruebaRodandoProducts.Api.Infrastructure.Entities;
-using AppPruebaRodandoProducts.Api.Infrastructure.Repositories.RepositoriesGeneric;
 using AppPruebaRodandoProducts.Api.InfrastructureService.Context;
 using System;
 using System.Collections.Generic;
@@ -8,41 +8,40 @@ using System.Text;
 
 namespace AppPruebaRodandoProducts.Api.DomainService
 {
-    public class ClienteDomain : ClienteRepository, IClienteDomain
+    public class ClienteDomain : IClienteDomain
     {
-        public ClienteDomain(ApplicationDbContext context) : base(context)
+        private readonly ApplicationDbContext context;
+        private readonly IClienteApplication clienteApplication;
+
+        public ClienteDomain(ApplicationDbContext context, IClienteApplication clienteApplication)
         {
-
+            this.context = context;
+            this.clienteApplication = clienteApplication;
         }
-        //private IGenericRepository<TEntity> genericRepository;
 
-        //public ClienteDomain(IGenericRepository<TEntity> genericRepository)
-        //{
-        //    this.genericRepository = genericRepository;
-        //}
-        //public void Delete(int id)
-        //{
-        //    genericRepository.Delete(id);
-        //}
+        public void Delete(int id)
+        {
+            clienteApplication.Delete(id);
+        }
 
-        //public IEnumerable<TEntity> GetAll()
-        //{
-        //    return genericRepository.GetAll();
-        //}
+        public IEnumerable<Clientes> GetAll()
+        {
+            return clienteApplication.GetAll();
+        }
 
-        //public TEntity GetById(int id)
-        //{
-        //    return genericRepository.GetById(id);
-        //}
+        public Clientes GetById(int id)
+        {
+            return clienteApplication.GetById(id);
+        }
 
-        //public TEntity Insert(TEntity entity)
-        //{
-        //    return genericRepository.Insert(entity);
-        //}
+        public Clientes Insert(Clientes entity)
+        {
+            return clienteApplication.Insert(entity);
+        }
 
-        //public TEntity Update(TEntity entity)
-        //{
-        //    return genericRepository.Update(entity);
-        //}
+        public Clientes Update(Clientes entity)
+        {
+            return clienteApplication.Update(entity);
+        }
     }
 }

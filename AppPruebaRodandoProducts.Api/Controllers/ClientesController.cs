@@ -23,7 +23,7 @@ namespace AppPruebaRodandoProducts.Api.Controllers
             this.clienteApplication = clienteApplication;
         }
 
-        public IEnumerable<Clientes> GetClientes()
+        public IEnumerable<Clientes> GetAll()
         {
             return clienteApplication.GetAll();
         }

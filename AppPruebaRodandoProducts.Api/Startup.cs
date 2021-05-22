@@ -43,7 +43,7 @@ namespace AppPruebaRodandoProducts.Api
             
             services.AddSingleton<IClienteApplication, ClienteApplication>();
             services.AddSingleton<IClienteDomain, ClienteDomain>();
-            services.AddSingleton<IClienteRepository, ClienteRepository>();
+            //services.AddSingleton<IClienteRepository, ClienteRepository>();
 
         }
 

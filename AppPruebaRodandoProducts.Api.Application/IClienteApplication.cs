@@ -1,16 +1,17 @@
-﻿using AppPruebaRodandoProducts.Api.Domain;
+﻿using AppPruebaRodandoProducts.Api.Application.Models;
+using AppPruebaRodandoProducts.Api.Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace AppPruebaRodandoProducts.Api.Application
 {
-    public interface IClienteApplication : IClienteDomain
+    public interface IClienteApplication
     {
-        //IEnumerable<TEntity> GetAll();
-        //TEntity GetById(int id);
-        //TEntity Insert(TEntity entity);
-        //TEntity Update(TEntity entity);
-        //void Delete(int id);
+        IEnumerable<Clientes> GetAll();
+        Clientes GetById(int id);
+        Clientes Insert(Clientes clientes);
+        Clientes Update(Clientes clientes);
+        void Delete(int id);
     }
 }
